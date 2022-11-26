@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -29,4 +27,16 @@ public class Cliente extends Pessoa{
     public void setVip(Boolean vip) {
         this.vip = vip;
     }
+
+    /*INICIO METODO*/
+    /*PARA ADICIONAR ENDERECOS A CLASSE*/
+    public void addEndereco(Endereco endereco){
+        this.enderecos.add(endereco);
+
+    }
+
+    public void imprimirEnderecos(){
+
+    }
+    /*FIM METODO*/
 }
