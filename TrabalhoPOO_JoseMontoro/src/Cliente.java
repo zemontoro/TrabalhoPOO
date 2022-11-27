@@ -32,11 +32,13 @@ public class Cliente extends Pessoa{
     /*PARA ADICIONAR ENDERECOS A CLASSE*/
     public void addEndereco(Endereco endereco){
         this.enderecos.add(endereco);
-
     }
 
-    public void imprimirEnderecos(){
-
+    public boolean imprimirEnderecos(){
+        for (Endereco e: getEnderecos()){
+            System.out.println("Logradouro: "+e.getLogradouro() + ", Numero: " +e.getNumero() + ", Cidade: "+e.getCidade()+", UF: "+e.getUf() + ", Complemento: "+e.getComplemento());
+        }
+        return false;
     }
     /*FIM METODO*/
 }
