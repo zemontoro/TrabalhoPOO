@@ -1,6 +1,24 @@
 public class Executavel {
     public static void main(String[] args) {
 
+        //APLICAÇÃO 1 :
+        //CRIANDO OS FUNCIONARIOS GERENTE, ATENDENTE
+        Funcionario FGe = new Funcionario();
+        Funcionario FAte = new Funcionario();
+        //CRIANDO OS CARGOS GERENTE, ATENDENTE
+        Cargo gerente = new Cargo();
+        Cargo atendente = new Cargo();
+        //ADICIONANDO OS CARGOS AOS FUNCIONARIOS
+        FGe.addCargo(gerente);
+        FAte.addCargo(atendente);
+        //ATRIBUINDO OS VALORES DE NOME, CPF E TEL
+        FGe.setNome("Luiza");
+        FGe.setCpf("479.875.479-85");
+        FGe.setSalario(5000.0);
+        FAte.setNome("Marcos Rogerio");
+        FAte.setCpf("157.754.647-11");
+        FAte.setSalario(2100.0);
+        //---------------------------
 
         //APLICAÇÃO 2 :
         //CRIANDO OBJETO CLIENTE C1 E ATRIBUINDO
@@ -40,6 +58,7 @@ public class Executavel {
         c1.addEndereco(e3);
         //---------------------------
         //Imprimindo os Enderecos
+        System.out.println("ENDERECOS:");
         System.out.println(c1.imprimirEnderecos());
 
 

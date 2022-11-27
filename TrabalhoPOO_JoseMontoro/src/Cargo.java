@@ -4,7 +4,7 @@ import java.util.Collection;
 public class Cargo {
 
     //INICIO ATRIBUTOS
-    private String nome;
+    private String nomeCargo;
     //VERIFICAR SE DEVE TER UMA COLLECTION NA CLASSE CARGO (DIAGRAMA DE CLASSE TÁ 0.*)
     private Collection<Funcionario> funcionarios = new ArrayList<>();
 
@@ -13,17 +13,14 @@ public class Cargo {
     //INICIO METODOS GETTERS E SETTERS
 
     public String getNome() {
-        return nome;
+        return nomeCargo;
     }
-
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nomeCargo = nome;
     }
-
     public Collection<Funcionario> getFuncionarios() {
         return funcionarios;
     }
-
     public void setFuncionarios(Collection<Funcionario> funcionarios) {
         this.funcionarios = funcionarios;
     }
