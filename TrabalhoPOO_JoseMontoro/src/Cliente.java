@@ -6,12 +6,6 @@ public class Cliente extends Pessoa{
     private Collection<Endereco> enderecos = new ArrayList<>();
 
 
-
-    public void listarEnderecos(){
-
-    }
-
-
     public Collection<Endereco> getEnderecos() {
         return enderecos;
     }
