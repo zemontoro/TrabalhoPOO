@@ -7,11 +7,9 @@ public class Funcionario extends Pessoa implements IUsuario{
     private Double salario;
     private Collection<Cargo> cargos = new ArrayList<>();
 
-
     //FIM ATRIBUTOS
 
     //INICIO METODOS GETTERS E SETTERS
-
     public Double getSalario() {
         return salario;
     }
@@ -24,7 +22,6 @@ public class Funcionario extends Pessoa implements IUsuario{
     public void setCargos(Collection<Cargo> cargos) {
         this.cargos = cargos;
     }
-
     //FIM METODOS GETTERS E SETTERS
 
     public void addCargo(Cargo cargo){

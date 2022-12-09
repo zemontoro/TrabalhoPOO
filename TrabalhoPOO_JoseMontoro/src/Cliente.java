@@ -25,6 +25,7 @@ public class Cliente extends Pessoa implements IUsuario{
     public void addEndereco(Endereco endereco){
         this.enderecos.add(endereco);
     }
+    public void addContaCorrente (ContaCorrente contaCorrente){this.contas.add(contaCorrente);}
 
     public boolean imprimirEnderecos(){
         for (Endereco e: getEnderecos()){
@@ -37,4 +38,6 @@ public class Cliente extends Pessoa implements IUsuario{
         this.contas.add(conta);
     }
     /*FIM METODO*/
+
+
 }

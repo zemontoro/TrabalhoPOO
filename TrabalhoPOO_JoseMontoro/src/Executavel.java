@@ -60,6 +60,21 @@ public class Executavel {
         //Imprimindo os Enderecos
         System.out.println("ENDERECOS:");
         System.out.println(c1.imprimirEnderecos());
+        //APLICAÇÃO 3 :
+        //CRIANDO OBJETO CLIENTE C1 E ATRIBUINDO
+        Cliente c3 = new Cliente();
+        c3.setNome("Filipe Norberto");
+        c3.setCpf("465.058.256-54");
+        c3.setVip(true);
+        //CRIANDO E ESTANCIANDO A CONTA CORRENTE
+        ContaCorrente CC1 = new ContaCorrente();
+        CC1.setNumero("400");
+        CC1.setLimite(5000.0);
+        c3.addConta(CC1);
+
+
+
+
 
 
     }
