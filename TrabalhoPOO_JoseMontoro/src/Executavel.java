@@ -81,6 +81,18 @@ public class Executavel {
         //-----------------------------------------
 
         //APLICAÇÃO 4 :
-        
+        //CRIANDO OBJETO CLIENTE C1 E ATRIBUINDO
+        Cliente c4 = new Cliente();
+        c4.setNome("Maria Eduarda");
+        c4.setCpf("444.249.874-22");
+        c4.setVip(false);
+        //CRIANDO E ESTANCIANDO A CONTA CORRENTE
+        ContaCorrente ccMaria = new ContaCorrente();
+        ccMaria.setNumero("650");
+        ccMaria.setLimite(1000.0);
+        c4.addConta(ccMaria);
+
+        //DEPOSITANDO E TRANSFERINDO
+
     }
 }
