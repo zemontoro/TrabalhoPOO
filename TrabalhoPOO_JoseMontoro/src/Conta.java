@@ -4,6 +4,7 @@ import java.util.Collection;
 public abstract class Conta {
     //INICIO ATRIBUTOS
     private String numero;
+    private Double saldoo;
 
     private Collection<Credito> listaCredito = new ArrayList<>();
     private Collection<Debito> listaDebito = new ArrayList<>();
@@ -15,6 +16,9 @@ public abstract class Conta {
         this.numero=numero;
     }
 
+    //Java sugeriu o no-args para eliminar erro, tirar duvida com o professor depois ...
+    protected Conta() {
+    }
 
     //FIM METODOS CONSTRUTOR
     //--------------------------------------------------------
@@ -26,6 +30,7 @@ public abstract class Conta {
         this.listaDebito.add(debito);
     }
     //--------------------------------------------------------
+
     //INICIO METODOS GETTERS E SETTERS
     public Collection<Credito> getListaCredito() {
         return listaCredito;
@@ -53,18 +58,21 @@ public abstract class Conta {
     //FIM METODOS GETTERS E SETTERS
 
 
-    //INICIO METODOS DEPOSITAR
-    public void depositar(Double valor){
+    //INICIO METODOS DEPOSITAR, SACAR E CALCULAR SALDO
+    public void depositar(Double valorDeposito){
        Credito CR1 = new Credito(this);
-       CR1.setValor(valor);
+       CR1.setValor(valorDeposito);
        this.addCreditos(CR1);
 
     }
-    //INICIO METODOS SACAR
-    public void sacar(Double valor){
-        Debito debito = new Debito();
-        debito.setValor(valor);
-        this.addDebitos(valor);
+    public void sacar(Double valorSaque){
+        //if (valorSaque>){
+            //Fazer a validacao do ValorDoSaque
+        //}
+        Debito DE1 = new Debito(this);
+        DE1.setValor(valorSaque);
+        this.addDebitos(DE1);
     }
-    //FIM METODOS
+
+    //FIM METODOS DEPOSITAR, SACAR E CALCULAR SALDO
 }
