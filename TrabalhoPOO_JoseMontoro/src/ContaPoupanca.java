@@ -1,9 +1,11 @@
 public class ContaPoupanca extends Conta{
 
-    public ContaPoupanca(String numero, Double rentabilidadeMensal) {
-        super(numero);
-        this.rentabilidadeMensal = rentabilidadeMensal;
-    }
+//    public ContaPoupanca(String numero, Double rentabilidadeMensal) {
+//        super(numero);
+//        this.rentabilidadeMensal = rentabilidadeMensal;
+//    }
+
+
 
     //INICIO ATRIBUTOS
     private Double rentabilidadeMensal;

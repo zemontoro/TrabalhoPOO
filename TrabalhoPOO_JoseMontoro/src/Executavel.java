@@ -57,12 +57,16 @@ public class Executavel {
         e3.setCidade("Floripa");
         c1.addEndereco(e3);
         //Imprimindo os Enderecos
-        System.out.println("ENDERECOS:");
+        System.out.println("----------------INICIO APLICACAO 2----------------");
+        System.out.println("APLICACAO 2");
         System.out.println(c1.imprimirEnderecos());
         //--------------------------------------------
 
         //APLICAÇÃO 3 :
         //CRIANDO OBJETO CLIENTE C1 E ATRIBUINDO
+        System.out.println("----------------FIM APLICACAO 2 ----------------");
+        System.out.println();
+        System.out.println("----------------INICIO APLICACAO 3----------------");
         Cliente c3 = new Cliente();
         c3.setNome("Filipe Norberto");
         c3.setCpf("465.058.256-54");
@@ -78,6 +82,7 @@ public class Executavel {
         contaCorrente.depositar(100.0);
         contaCorrente.sacar(50.0);
         contaCorrente.calcularSaldo();
+        System.out.println("----------------FIM APLICACAO 3 ----------------");
         //-----------------------------------------
 
         //APLICAÇÃO 4 :
@@ -91,8 +96,21 @@ public class Executavel {
         ccMaria.setNumero("650");
         ccMaria.setLimite(1000.0);
         c4.addConta(ccMaria);
+        //DEPOSITANDO O VALOR
+        ccMaria.depositar(1000.0);
+        //CRIANDO E ESTANCIANDO A CONTA CORRENTE
+        Cliente c5 = new Cliente();
+        c5.setNome("Flavio Aleijo");
+        c5.setCpf("245.745.249-55");
+        c5.setVip(true);
+        //CRIANDO E ESTANCIANDO A CONTA POUPANCA
+        ContaPoupanca cpFlavio = new ContaPoupanca();
+        cpFlavio.setNumero("1121");
+        cpFlavio.setRentabilidadeMensal(1.2);
+        c5.addConta(cpFlavio);
+        //DEPOSITANDO O VALOR
+        cpFlavio.depositar(1000.0);
 
-        //DEPOSITANDO E TRANSFERINDO
 
     }
 }

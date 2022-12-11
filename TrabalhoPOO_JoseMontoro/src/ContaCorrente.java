@@ -36,7 +36,6 @@ public class ContaCorrente extends Conta{
         Double total=0.0, auxC = 0.0, auxD = 0.0;
         for (Credito credito: getListaCredito()){
             auxC+=credito.getValor();
-
         }
         for(Debito debito: getListaDebito()){
             auxD+=debito.getValor();
@@ -45,9 +44,6 @@ public class ContaCorrente extends Conta{
 //        System.out.println("Soma de Creditos: "+auxC);
 //        System.out.println("Soma de Debitos: "+auxD);
         System.out.println("SALDO da Conta:" +total);
-
-
     }
-
     //FIM METODOS
 }
