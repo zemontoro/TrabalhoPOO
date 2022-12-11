@@ -27,9 +27,11 @@ public class ContaCorrente extends Conta{
     public void transferir(Conta contaDestino, Double valor){
         //ADICIONA CREDITO A CONTA DESTINADA
         Credito creditoTransferencia = new Credito(contaDestino);
-        this.addCreditos(creditoTransferencia);
+        creditoTransferencia.setValor(valor);
+        contaDestino.addCreditos(creditoTransferencia);
         //ADICIONA DEBITO NA CONTA DE ORIGEM
         Debito debitoTransferencia = new Debito(this);
+        debitoTransferencia.setValor(valor);
         this.addDebitos(debitoTransferencia);
     }
     public void calcularSaldo(){
@@ -40,10 +42,10 @@ public class ContaCorrente extends Conta{
         for(Debito debito: getListaDebito()){
             auxD+=debito.getValor();
         }
-        total=auxC-auxD;
+        total=(auxC-auxD)+limite;
 //        System.out.println("Soma de Creditos: "+auxC);
 //        System.out.println("Soma de Debitos: "+auxD);
-        System.out.println("SALDO da Conta:" +total);
+        System.out.println("Saldo da Conta Corrente + LIMITE:" +total);
     }
     //FIM METODOS
 }

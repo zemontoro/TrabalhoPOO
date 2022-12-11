@@ -18,11 +18,22 @@ public class ContaPoupanca extends Conta{
     public void setRentabilidadeMensal(Double rentabilidadeMensal) {
         this.rentabilidadeMensal = rentabilidadeMensal;
     }
+
     //FIM METODOS GETTERS E SETTERS
 
     //INICIO METODOS
-    public Double calcularSaldo(){
-        return 0.0;
+    public void calcularSaldo(){
+        Double total=0.0, auxC = 0.0, auxD = 0.0;
+        for (Credito credito: getListaCredito()){
+            auxC+=credito.getValor();
+        }
+        for(Debito debito: getListaDebito()){
+            auxD+=debito.getValor();
+        }
+        total=(auxC-auxD);
+        //System.out.println("Soma de Creditos: "+auxC);
+        //System.out.println("Soma de Debitos: "+auxD);
+        System.out.println("SALDO da Conta Poupanca:" +total);
     }
     //FIM METODOS
 }

@@ -83,8 +83,9 @@ public class Executavel {
         contaCorrente.sacar(50.0);
         contaCorrente.calcularSaldo();
         System.out.println("----------------FIM APLICACAO 3 ----------------");
+        System.out.println();
         //-----------------------------------------
-
+        System.out.println("----------------INICIO APLICACAO 4----------------");
         //APLICAÇÃO 4 :
         //CRIANDO OBJETO CLIENTE C1 E ATRIBUINDO
         Cliente c4 = new Cliente();
@@ -98,19 +99,14 @@ public class Executavel {
         c4.addConta(ccMaria);
         //DEPOSITANDO O VALOR
         ccMaria.depositar(1000.0);
-        //CRIANDO E ESTANCIANDO A CONTA CORRENTE
-        Cliente c5 = new Cliente();
-        c5.setNome("Flavio Aleijo");
-        c5.setCpf("245.745.249-55");
-        c5.setVip(true);
-        //CRIANDO E ESTANCIANDO A CONTA POUPANCA
-        ContaPoupanca cpFlavio = new ContaPoupanca();
-        cpFlavio.setNumero("1121");
-        cpFlavio.setRentabilidadeMensal(1.2);
-        c5.addConta(cpFlavio);
+        //CRIANDO A CONTA POUPANCA
+        ContaPoupanca cpMaria = new ContaPoupanca();
         //DEPOSITANDO O VALOR
-        cpFlavio.depositar(1000.0);
-
-
+        cpMaria.depositar(1000.0);
+        //TRANSFERINDO DA CONTA CORRENTE P CONTA POUPANCA
+        ccMaria.transferir(cpMaria,500.0);
+        cpMaria.calcularSaldo();
+        ccMaria.calcularSaldo();
+        System.out.println("----------------FIM APLICACAO 4----------------");
     }
 }
