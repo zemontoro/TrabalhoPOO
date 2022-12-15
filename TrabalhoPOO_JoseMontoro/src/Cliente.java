@@ -39,5 +39,33 @@ public class Cliente extends Pessoa implements IUsuario{
     }
     /*FIM METODO*/
 
+    /*CRIANDO A AUTENTICAÇÃO DO USUÁRIO*/
+    private String senha;
+    public String getSenha() {
+        return senha;
+    }
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    private String nome;
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    //felipe fez
+    public Boolean autenticar(String nome, String senha) {
+        if (this.getNome() == nome) {
+            if (this.getSenha() == senha) {
+                return true;
+            }else {
+                System.out.println("[+] Password incorrect");
+            }return false;
+        }System.out.println("[+] Username incorrect");
+        {return true;}
+    }
+
 
 }

@@ -108,5 +108,13 @@ public class Executavel {
         cpMaria.calcularSaldo();
         ccMaria.calcularSaldo();
         System.out.println("----------------FIM APLICACAO 4----------------");
+
+
+        //felipe
+        //Testando Autenticação
+        Cliente tstJao = new Cliente();
+        tstJao.setNome("Filipe Norberto");
+        tstJao.setSenha("465.058.256-54");
+        tstJao.autenticar("Filipe Norberto", "465.058.256-54");
     }
 }
